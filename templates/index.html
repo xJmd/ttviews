@@ -1,0 +1,112 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Views Booster</title>
+  <!-- templates/index.html -->
+
+<!-- templates/index.html -->
+
+<style>
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+  
+    #container {
+      width: 80%;
+      margin: 50px auto;
+    }
+  
+    #search-panel {
+      background-color: #333;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    label {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+  
+    input,
+    select {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      font-size: 1em;
+      background-color: #ddd; /* Light gray background */
+      border: none;
+      border-radius: 5px;
+    }
+  
+    #submit-btn {
+      padding: 15px;
+      background-color: #4CAF50;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+  
+    #submit-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+  
+  
+  <script>
+    function validateTikTokLink() {
+      var tiktokLink = document.getElementById('tiktok-link').value;
+      if (!tiktokLink.includes('tiktok.com')) {
+        alert('Invalid TikTok link. Please enter a valid TikTok link.');
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div id="search-panel">
+      <h2>TikTok Views Booster</h2>
+      <form action="/place-order" method="post" onsubmit="return validateTikTokLink()">
+        <label for="tiktok-link">Input TikTok Link:</label>
+        <input type="text" id="tiktok-link" name="tiktok-link" placeholder="Enter TikTok link">
+
+        <br>
+        <label for="views-select">Select Views:</label>
+        <select id="views-select" name="views-select">
+          <option value="1k">1,000 views</option>
+          <option value="2k">2,000 views</option>
+          <option value="3k">3,000 views</option>
+          <!-- Add more options as needed -->
+        </select>
+        <br>
+        <input type="submit" id="submit-btn" value="Place Order">
+      </form>
+    </div>
+  </div>
+</body>
+</html>
